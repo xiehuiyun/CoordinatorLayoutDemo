@@ -5,18 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-        android:scaleType="matrix"
-        android:src="@drawable/icon_bg"
-        app:layout_behavior="cn.jhc.coordinatorlayoutdemo.behavior.ImageBehavior" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/level2_recycler"
+    <!--注意：
+            1. 一定要用AppBarLayout包裹Toolbar，不然就没有隐藏显示的效果了
+            2. ToolBar设置  app:layout_scrollFlags="scroll|enterAlways|snap" 属性-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:theme="@style/AppTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme"
+            app:layout_scrollFlags="scroll|enterAlways|snap" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--一定要设置
+               app:layout_behavior="@string/appbar_scrolling_view_behavior
+         不然没效果-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/level2_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.design.widget.CoordinatorLayout>
