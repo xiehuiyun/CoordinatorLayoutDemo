@@ -7,6 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.jaeger.library.StatusBarUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +27,11 @@ public class Level2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level2);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.parseColor("#344541"));
+        toolbar.setTitle("AppBarLayout与CoordinatorLayout结合");
+        setSupportActionBar(toolbar);
+        StatusBarUtil.setColor(this,Color.parseColor("#f9c8b9"),0);
         initData();
 
         recyclerView = (RecyclerView) findViewById(R.id.level2_recycler);
@@ -32,10 +39,7 @@ public class Level2Activity extends AppCompatActivity {
         adapter = new RecyclerAdapter(data);
         recyclerView.setAdapter(adapter);
         recyclerView.setNestedScrollingEnabled(true);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
-        toolbar.setTitle("AppBarLayout与CoordinatorLayout结合");
-        setSupportActionBar(toolbar);
+
     }
 
     private void initData() {
