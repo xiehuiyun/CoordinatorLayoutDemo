@@ -25,13 +25,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View root = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view,parent,false);
+        View root = LayoutInflater.from(parent.getContext()).inflate(R.layout.text_view, parent, false);
         return new MyViewHolder(root);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-            holder.textView.setText(list.get(position));
+        holder.textView.setText(list.get(position));
     }
 
     @Override
@@ -47,5 +47,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.text_view);
         }
+    }
+
+    public void setData(List<String> data) {
+        this.list = data;
     }
 }

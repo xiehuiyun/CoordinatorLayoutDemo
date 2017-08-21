@@ -15,6 +15,7 @@ import com.jaeger.library.StatusBarUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.jhc.coordinatorlayoutdemo.DiffUtil.RecyclerDiffUtilActivity;
 import cn.jhc.coordinatorlayoutdemo.R;
 import cn.jhc.coordinatorlayoutdemo.adapter.RecyclerAdapter;
 
@@ -47,7 +48,8 @@ public class Level2Activity extends AppCompatActivity {
        findViewById(R.id.move_to_level3).setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               startActivity(new Intent(Level2Activity.this,Level3Activity.class));
+//               startActivity(new Intent(Level2Activity.this,Level3Activity.class));
+               startActivity(new Intent(Level2Activity.this,RecyclerDiffUtilActivity.class));
            }
        });
     }

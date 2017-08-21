@@ -16,10 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".level.Level2Activity"
-            android:theme="@style/Theme.Design.Light.NoActionBar">
-        </activity>
+        <activity
+            android:name=".level.Level2Activity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".level.Level3Activity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".DiffUtil.RecyclerDiffUtilActivity"></activity>
     </application>
 
 </manifest>
