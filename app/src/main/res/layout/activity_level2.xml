@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            app:titleTextColor="@color/textColorPrimary"
             app:popupTheme="@style/AppTheme"
             app:layout_scrollFlags="scroll|enterAlways|snap" />
 
@@ -34,4 +35,11 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+    <Button
+        android:id="@+id/move_to_level3"
+        app:layout_anchorGravity="bottom"
+       android:layout_marginTop="530dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="next to level3"/>
 </android.support.design.widget.CoordinatorLayout>

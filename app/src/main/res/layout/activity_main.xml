@@ -23,6 +23,6 @@
         android:id="@+id/to_next_level2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="500dp"
         android:text="to next level" />
 </android.support.design.widget.CoordinatorLayout>
