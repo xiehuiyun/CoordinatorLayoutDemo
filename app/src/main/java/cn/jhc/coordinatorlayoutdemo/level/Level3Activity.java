@@ -1,14 +1,18 @@
 package cn.jhc.coordinatorlayoutdemo.level;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.jaeger.library.StatusBarUtil;
 
 import cn.jhc.coordinatorlayoutdemo.R;
+import cn.jhc.coordinatorlayoutdemo.vasSonic.VasActivity;
 
 public class Level3Activity extends AppCompatActivity {
 
@@ -29,5 +33,11 @@ public class Level3Activity extends AppCompatActivity {
         toolbar.setTitle("CollapsingToolbarLayout与NestedScrollView");
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         setSupportActionBar(toolbar);
+        findViewById(R.id.level3_move_to_next).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Level3Activity.this,VasActivity.class));
+            }
+        });
     }
 }

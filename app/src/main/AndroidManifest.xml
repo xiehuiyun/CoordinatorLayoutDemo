@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.jhc.coordinatorlayoutdemo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +25,10 @@
         <activity
             android:name=".level.Level3Activity"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity android:name=".DiffUtil.RecyclerDiffUtilActivity"></activity>
+        <activity android:name=".DiffUtil.RecyclerDiffUtilActivity" />
+        <activity android:name=".level.Level4Activity" />
+        <activity android:name=".vasSonic.VasActivity" />
+        <activity android:name=".vasSonic.BrowserActivity"></activity>
     </application>
 
 </manifest>
